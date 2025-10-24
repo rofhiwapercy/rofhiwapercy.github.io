@@ -240,6 +240,7 @@ html, body {
 .footer-email {
   color: var(--muted);
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* Pixabay Licence link */
@@ -486,5 +487,6 @@ a, button {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 :focus { outline: 3px solid rgba(201,139,70,0.12); outline-offset: 3px; }
+
 
 
