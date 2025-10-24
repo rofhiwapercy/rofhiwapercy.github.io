@@ -237,6 +237,11 @@ html, body {
   border-top: 1px solid rgba(43,37,33,0.03);
 }
 
+.footer-email {
+  color: var(--muted);
+  cursor: pointer;
+}
+
 /* Pixabay Licence link */
 .license-link {
   text-decoration: none;
@@ -481,4 +486,5 @@ a, button {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 :focus { outline: 3px solid rgba(201,139,70,0.12); outline-offset: 3px; }
+
 
