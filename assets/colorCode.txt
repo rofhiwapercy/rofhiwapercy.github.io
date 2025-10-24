@@ -1,0 +1,13 @@
+Dark brown:  #693611ff
+Pastel Orange: #f5c695
+Gray Orange: #af7f2b
+Navy: #0E1A2B
+Dark Navy Blue: #0B132B
+Royal Blue: #3A506B
+Teal Blue:  #5BC0BE
+Off-white: #FAFAFA
+Deep Midnight Blue: #0A192F
+Purple Glow: #7A5AF8
+Soft White: #E6F1FF
+Unkown: #3498db
+27 Blue: #0A127F
