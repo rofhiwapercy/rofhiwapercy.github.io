@@ -22,6 +22,11 @@
 
 /* Reset / base */
 * { box-sizing: border-box; }
+
+html{
+  scroll-behavior: smooth;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -238,9 +243,14 @@ html, body {
 }
 
 .footer-email {
-  color: var(--muted);
+  color: var(--brown-mid);
   cursor: pointer;
   text-decoration: none;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+  color: var(--brown-dark);
 }
 
 /* Pixabay Licence link */
