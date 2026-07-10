@@ -89,4 +89,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // hook to update cart UI or analytics
     // console.log('product added', e.detail);
   });
-});
+);
