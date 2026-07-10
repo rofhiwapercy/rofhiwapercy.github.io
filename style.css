@@ -498,5 +498,22 @@ a, button {
 }
 :focus { outline: 3px solid rgba(201,139,70,0.12); outline-offset: 3px; }
 
+/* Under Construction Page */
+.hero-right .headline {
+  animation: fadeInUp 0.8s ease;
+}
 
+.hero-right .lead {
+  animation: fadeInUp 1.1s ease;
+}
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
