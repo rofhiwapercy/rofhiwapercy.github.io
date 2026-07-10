@@ -3,20 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const qs = (sel, ctx = document) => ctx.querySelector(sel);
   const qsa = (sel, ctx = document) => Array.from((ctx || document).querySelectorAll(sel));
 
-// Toast
-  function createToast(message, timeout = 2200) {
-    const container = document.getElementById('toastContainer') || (() => {
-      const c = document.createElement('div');
-      c.id = 'toastContainer';
-      document.body.appendChild(c);
-      return c;
-    })();
-
-    const toast = document.createElement('div');
-    toast.className = 'site-toast';
-    toast.setAttribute('role', 'status');
-    toast.textContent = message;
-    container.appendChild(toast);
 
     // show
     requestAnimationFrame(() => {
@@ -97,84 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => curriculum.classList.remove('flash-highlight'), 2200);
     });
   }
-
-// Modalar
-  const storeLink = document.getElementById('storeLink');
-  const storeModal = document.getElementById('storeModal');
-  const modalCloseButtons = qsa('.close-btn', storeModal || document);
-  const focusableSelector = 'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])';
-  let lastActiveElement = null;
-
-  function openModal(modal, triggerEl = null) {
-    if (!modal) return;
-    lastActiveElement = triggerEl || document.activeElement;
-    modal.classList.add('active');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    const first = qs(focusableSelector, modal);
-    if (first) first.focus();
-  }
-
-  function closeModal(modal) {
-    if (!modal) return;
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
-      lastActiveElement.focus();
-    }
-  }
-
-  if (storeLink && storeModal) {
-    storeLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal(storeModal, storeLink);
-    });
-
-    modalCloseButtons.forEach(btn =>
-      btn.addEventListener('click', () => closeModal(storeModal))
-    );
-
-    // click outside modal-content to close
-    storeModal.addEventListener('click', (e) => {
-      if (e.target === storeModal) closeModal(storeModal);
-    });
-
-    // escape to close
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && storeModal.classList.contains('active')) {
-        closeModal(storeModal);
-      }
-    });
-  }
-
-  // Add to Cart (non-blocking toast, safer selectors)
-  const addToCartButtons = qsa(
-    '.product-card .btn.primary, .product-card .btnModal, .product-card .btn.primaryModal, .product-card .btnModal.primaryModal'
-  );
-
-  addToCartButtons.forEach(button => {
-    button.addEventListener('click', (ev) => {
-      const productCard = button.closest('.product-card');
-      if (!productCard) return;
-
-      const title = productCard.dataset.title
-        || (qs('.product-title', productCard) && qs('.product-title', productCard).textContent.trim())
-        || 'Product';
-
-      const price = productCard.dataset.price
-        || (qs('.product-price', productCard) && qs('.product-price', productCard).textContent.trim())
-        || '';
-
-      createToast(`Added ${title}${price ? ' — ' + price : ''}`);
-
-      // dispatch a custom event for integration
-      const event = new CustomEvent('product:added', {
-        detail: { title, price, productCard }
-      });
-      document.dispatchEvent(event);
-    });
-  });
 
   /*hook */
   document.addEventListener('product:added', (e) => {
