@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects by Rofhiwa Percy — web development, programming, data science and chess."
+  <title>My Projects | Rofhiwa Percy</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .projects-page { padding: 52px 0 70px; }
+    .projects-intro { max-width: 720px; margin-bottom: 34px; }
+    .projects-intro h2 { margin: 0 0 10px; font-family: "Playfair Display", serif; color: var(--brown-dark); font-size: 40px; }
+    .projects-intro p { margin: 0; color: var(--muted-strong); line-height: 1.6; }
+    .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .project-card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid rgba(43,37,33,0.04); border-radius: 14px; padding: 24px; box-shadow: var(--box-shadow); transition: var(--transition); }
+    .project-card:hover { transform: translateY(-5px); box-shadow: 0 14px 34px rgba(43,37,33,0.09); }
+    .project-icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 12px; background: var(--Warm-100); color: var(--brown-dark); font-size: 25px; margin-bottom: 18px; }
+    .project-card h3 { margin: 0 0 8px; font-family: "Playfair Display", serif; color: var(--brown-dark); font-size: 25px; }
+    .project-card p { margin: 0 0 20px; color: var(--muted-strong); line-height: 1.55; flex: 1; }
+    .project-meta { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+    .project-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .project-actions .btn { text-decoration: none; display: inline-block; }
+    @media (max-width: 700px) { .project-grid { grid-template-columns: 1fr; } .projects-intro h2 { font-size: 32px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Rofhiwa Percy</h1>
+        <p class="tag">Projects &amp; experiments</p>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">☰</button>
+        <ul id="primaryNav" class="nav-list" role="menubar">
+          <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+          <li role="none"><a role="menuitem" href="index.html#about">About</a></li>
+          <li role="none"><a role="menuitem" href="projects.html" aria-current="page">My Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="projects-page container">
+    <section class="projects-intro">
+      <h2>My Projects</h2>
+      <p>A collection of projects and learning repositories covering programming, data science, web development and chess.</p>
+    </section>
+
+    <section class="project-grid" aria-label="Project list">
+      <article class="project-card">
+        <div class="project-icon" aria-hidden="true">♟</div>
+        <h3>Beginner Chess Lessons</h3>
+        <p>A practical chess-learning website focused on openings, tactics, endgames, game analysis and structured improvement.</p>
+        <div class="project-meta">HTML · CSS · JavaScript · GitHub Pages</div>
+        <div class="project-actions"><a class="btn primary" href="index.html">View Project</a></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon" aria-hidden="true">&lt;/&gt;</div>
+        <h3>CodeHub</h3>
+        <p>A programming repository for experimenting with code, building projects and developing practical software skills.</p>
+        <div class="project-meta">Programming · Development</div>
+        <div class="project-actions"><a class="btn primary" href="https://github.com/rofhiwapercy/CodeHub" target="_blank" rel="noopener noreferrer">GitHub Repository</a></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon" aria-hidden="true">Py</div>
+        <h3>Python</h3>
+        <p>A repository for Python practice, exercises and projects while building programming fundamentals.</p>
+        <div class="project-meta">Python · Programming</div>
+        <div class="project-actions"><a class="btn primary" href="https://github.com/rofhiwapercy/Python" target="_blank" rel="noopener noreferrer">GitHub Repository</a></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon" aria-hidden="true">R</div>
+        <h3>Learning R Coding</h3>
+        <p>A learning repository focused on developing skills in the R programming language and data-oriented coding.</p>
+        <div class="project-meta">R · Data &amp; Statistics</div>
+        <div class="project-actions"><a class="btn primary" href="https://github.com/rofhiwapercy/learning_R_coding" target="_blank" rel="noopener noreferrer">GitHub Repository</a></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon" aria-hidden="true">◈</div>
+        <h3>DataScience</h3>
+        <p>A space for data-science projects, experiments and future work with data analysis and modelling.</p>
+        <div class="project-meta">Data Science · Analysis</div>
+        <div class="project-actions"><a class="btn primary" href="https://github.com/rofhiwapercy/DataScience" target="_blank" rel="noopener noreferrer">GitHub Repository</a></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Built with PNETSTUDIOS and hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
