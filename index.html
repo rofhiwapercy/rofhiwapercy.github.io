@@ -4,165 +4,234 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rofhiwa Percy</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Navigation -->
   <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1>Beginner Chess Lessons</h1>
-        <p class="tag">Your First Step Toward a +1500 Rating</p>
-      </div>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">RP</span>
+        <span class="logo-text">Rofhiwa Percy</span>
+      </a>
 
       <nav class="main-nav" aria-label="Main navigation">
-        <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">☰</button>
-        <ul id="primaryNav" class="nav-list" role="menubar">
-          <li role="none"><a role="menuitem" href="index.html">Home</a></li>
-          <li role="none"><a role="menuitem" href="#about">About</a></li>
-          <li role="none"><a role="menuitem" href="unavailable.html">My Projects</a></li>
-          <li role="none"><a role="menuitem" class="storeLink" id="storeLink" href="#" aria-haspopup="dialog">Store</a></li>
+        <button
+          id="menuBtn"
+          class="menu-btn"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="primaryNav">
+          ☰
+        </button>
+
+        <ul id="primaryNav" class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="unavailable.html">Projects</a></li>
+          <li><a href="unavailable.html">Chess Classes</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-inner container">
-        <div class="hero-left">
-          <div class="hero-photo large" aria-hidden="true" style="background-image: url('assets/chess1.jpg');"></div>
-        </div>
 
-        <div class="hero-right">
-          <div class="round-photo" style="background-image: url('assets/Coach.png');" aria-hidden="true"></div>
-          <h2 class="headline">Learning chess shouldn't be hard.</h2>
-          <p class="lead">Learn what usually takes years to master in just one month, step-by-step proven methods and personalized guidance.Lessons from Rofhiwa Percy the 2024 VUT Chess <a href="https://www.ussa.org.za/" target="_blank" class="ussaLink" >USSA</a> assistant team manager.</p>
-          <div class="cta">
-            <button id="enrollBtn" class="btn primary">Enroll Now</button>
-            <button id="learnMoreBtn" class="btn outline">Learn More</button>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container hero-container">
+
+        <div class="hero-content">
+
+          <p class="eyebrow">CHEMICAL ENGINEERING · TECHNOLOGY · DATA SCIENCE</p>
+
+          <h1>
+            Building at the intersection of
+            <span>engineering</span> and technology.
+          </h1>
+
+          <p class="hero-description">
+            I'm Rofhiwa Percy Netshilongwe, a Chemical Engineering student interested in
+            software development, data science, problem solving, and building
+            useful things with technology.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="unavailable.html" class="btn btn-primary">
+              View My Projects
+            </a>
+
+            <a href="#about" class="btn btn-secondary">
+              About Me
+            </a>
           </div>
+
         </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-grid"></div>
+
+          <div class="visual-card visual-card-main">
+            <span class="visual-label">CURRENT FOCUS</span>
+            <strong>Engineering + Code</strong>
+            <p>Learning, building, experimenting.</p>
+          </div>
+
+          <div class="visual-card visual-card-small">
+            <span>&lt;/&gt;</span>
+          </div>
+
+          <div class="visual-orbit"></div>
+        </div>
+
       </div>
     </section>
 
-    <section id="curriculum" class="invisible-box content container cards" tabindex="-1">
-      <div class="card">
-        <h3>What You'll Learn</h3>
-        <ul class="bullets">
-          <li>Opening principles</li>
-          <li>Middle games/Tactics</li>
-          <li>Endgames</li>
-          <li>Game analysis (Advance)</li>
-          <li>Strategy (Advance)</li>
-        </ul>
+    <!-- About -->
+    <section id="about" class="section about-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>About Me</h2>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-intro">
+            <p class="large-text">
+              I'm a Chemical Engineering student with a growing interest in
+              Data Science and computational problem solving.
+            </p>
+          </div>
+
+          <div class="about-text">
+            <p>
+              My interests sit across several disciplines. I enjoy combining
+              engineering principles with programming, data, and practical
+              problem solving.
+            </p>
+
+            <p>
+              This website is a collection of the things I'm learning,
+              experimenting with, and building along the way.
+            </p>
+
+            <a href="#contact" class="text-link">
+              Let's connect →
+            </a>
+          </div>
+
+        </div>
+
       </div>
+    </section>
 
-      <div class="card">
-        <h3 id="guarantee">Achieve a +1500 rating</h3>
-        <p>Access to Lichess studies and a library of curated lessons. Structured practice and feedback.</p>
-        <div class="guarantee-badge">+1500</div>
+    <!-- Areas of Interest -->
+    <section class="section interests-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>What I'm Into</h2>
+        </div>
+
+        <div class="interest-grid">
+
+          <article class="interest-card">
+            <div class="interest-icon">CHE</div>
+            <h3>Chemical Engineering</h3>
+            <p>
+              Engineering principles, process design, process control, chemical process efficiency, and
+              problem-solving.
+            </p>
+          </article>
+
+          <article class="interest-card">
+            <div class="interest-icon">&lt;/&gt;</div>
+            <h3>Software & Web Development</h3>
+            <p>
+              Building websites, applications, and tools while improving my
+              programming skills.
+            </p>
+          </article>
+
+          <article class="interest-card">
+            <div class="interest-icon">DS</div>
+            <h3>Data Science</h3>
+            <p>
+              Exploring data, programming, analysis, and ways to turn
+              information into useful insights.
+            </p>
+            <a href="unavailable.html" class="card-link">
+              Visit Projects →
+            </a>
+          </article>
+
+          <article class="interest-card">
+            <div class="interest-icon">&#9817</div>
+            <h3>Chess</h3>
+            <p>
+              Strategy, analysis and coaching. Visit the
+              dedicated chess section of the site.
+            </p>
+
+            <a href="unavailable.html" class="card-link">
+              Visit Chess →
+            </a>
+          </article>
+
+        </div>
+
       </div>
     </section>
 
-    <section id="about" class="container about">
-      <h3>About the Program</h3>
-      <p>This beginner program focuses on practical play: openings, tactics, and endgames. Training includes guided lessons, game reviews and a personalized plan.</p>
+    <!-- Contact -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+
+        <div class="contact-content">
+
+          <h2>
+            Let's build
+            <span>something.</span>
+          </h2>
+
+          <p>
+            Interested in collaborating, discussing a project, or simply
+            connecting?
+          </p>
+
+          <a href="mailto:pnetstudios@gmail.com" class="btn btn-primary">
+            Get In Touch
+          </a>
+
+        </div>
+
+      </div>
     </section>
 
-    <section id="contact" class="contact container">
-      <!-- reserved for contact form or any other info -->
-    </section>
   </main>
 
-  <!-- Store Modal -->
-  <div id="storeModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="storeTitle" aria-hidden="true">
-    <div class="modal-content" role="document" tabindex="-1">
-      <div class="modal-header">
-        <h2 id="storeTitle">Chess Store</h2>
-        <button class="close-btn" aria-label="Close store modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p>Store Products Coming soon!!</p>
 
-        <div class="products-grid">
-          <!-- Product 1 -->
-          <div class="product-card" data-title="Beginner Chess Set" data-price="Free">
-              <div class="product-image" style="background-image: url('');"></div>
-              <div class="product-info">
-                <h3 class="product-title">Beginner Chess Set</h3>
-                <p class="product-description warning">This section is still being built. These are not real items</p>
-                <div class="product-price">Free</div>
-                <div class="image-credit">
-                  Photo: <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Photographer Name</a>
-                  — <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>
-                </div>
-                <div><button class="btnModal primaryModal">Add to Cart</button></div>
-              </div>
-          </div>
-
-          <!-- Product 2 -->
-          <div class="product-card" data-title="Chess Clock" data-price="Free">
-              <div class="product-image" style="background-image: url('');"></div>
-              <div class="product-info">
-                <h3 class="product-title">Chess Clock</h3>
-                <p class="product-description">This section is still being built. These are not real items</p>
-                <div class="product-price">Free</div>
-                <div class="image-credit">
-                  Photo: <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Photographer Name</a>
-                  — <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>
-                </div>
-                <div><button class="btnModal primaryModal">Add to Cart</button></div>
-              </div>
-          </div>
-
-          <!-- Product 3 -->
-          <div class="product-card" data-title="Chess Strategy Book" data-price="Free">
-              <div class="product-image" style="background-image: url('');"></div>
-              <div class="product-info">
-                <h3 class="product-title">Chess Strategy Book</h3>
-                <p class="product-description">This section is still being built. These are not real items</p>
-                <div class="product-price">Free</div>
-                <div class="image-credit">
-                  Photo: <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Photographer Name</a>
-                  — <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>
-                </div>
-                <div><button class="btnModal primaryModal">Add to Cart</button></div>
-              </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast container (used for non-blocking "added to cart" toasts) -->
-  <div id="toastContainer" aria-live="polite" aria-atomic="true"></div>
-
+  <!-- Footer -->
   <footer class="site-footer">
-    <div>
-      <p>This is a preliminary launch of the website, Please report any issues to <a class="footer-email" href="mailto:pnetstudios@gmail.com">PNETSTUDIOS</a>. Thank you in advance &#128522</p>
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <strong>Rofhiwa Percy</strong>
+        <span>Engineering · Technology · Data Science · Chess</span>
+      </div>
+      <div class="footer-links">
+        <a href="#" target="_blank">LinkedIn</a>
+      </div>
+      <p class="copyright">
+        &copy; <span id="year"></span> Rofhiwa Percy. Built with PNETSTUDIOS.
+      </p>
     </div>
-    <div class="container">
-      <p>&copy; <span id="year"></span> Built with PNETSTUDIOS and hosted on GitHub Pages</p>
-    </div>
-   <!-- <div class="container">
-      <p>
-        Image by <a class="license-link" target="_blank"  href="#" rel="noopener">author</a>
-        from
-        <a class="license-link" target="_blank" href="https://pixabay.com/" rel="noopener">Pixabay</a>
-    </p>
-    </div>
-  </footer> -->
+  </footer>
 
   <script src="scripts.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
