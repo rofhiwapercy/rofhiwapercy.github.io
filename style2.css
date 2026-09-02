@@ -1,4 +1,6 @@
 :root {
+    /* universal */
+
     --bg: #fbf8f5;
     --surface: #fffdfb;
     --warm: #f3e8dd;
@@ -10,6 +12,33 @@
     --muted: rgba(43, 37, 33, 0.58);
     --inverse: #fffaf7;
     --shadow: 0 18px 50px rgba(43, 37, 33, 0.08);
+    
+    /* Body color scheme variables */
+
+    /* Background */
+
+    --radial-gradient1: rgba(217, 185, 154, 0.18);
+    --radial-gradient2: rgba(201, 139, 70, 0.1);
+
+    /* header */
+
+    --header-bk: rgba(255, 253, 251, 0.72);
+    --border-bottom: 1px solid rgba(43, 37, 33, 0.05);
+
+    /* Unavalble card */
+
+    --unavailable-card-bk: rgba(255, 253, 251, 0.88);
+    --unavailable-card-br:  1px solid rgba(43, 37, 33, 0.05);
+
+    /* Decorative background circle */
+
+    --decorative-circle-1: rgba(217, 185, 154, 0.16);
+    --decorative-circle-2: rgba(201, 139, 70, 0.08);
+
+    /*Icon*/
+
+    --icon-bk: rgba(139, 90, 54, 0.06);
+    --icon-bx-shadow:rgba(43, 37, 33, 0.07);
 }
 * {
     box-sizing: border-box;
@@ -28,12 +57,12 @@ body {
     background:
     radial-gradient(
         circle at 15% 20%,
-        rgba(217, 185, 154, 0.18),
+        var(--radial-gradient1) ,
         transparent 30%
     ),
     radial-gradient(
         circle at 85% 80%,
-        rgba(201, 139, 70, 0.10),
+        var(--radial-gradient2),
         transparent 30%
     ),
     linear-gradient(
@@ -52,8 +81,8 @@ body {
 .site-header {
     width: 100%;
     padding: 22px 0;
-    border-bottom: 1px solid rgba(43, 37, 33, 0.05);
-    background: rgba(255, 253, 251, 0.72);
+    border-bottom: var(--border-bottom);
+    background: var(--header-bk);
     backdrop-filter: blur(8px);
 }
 
@@ -114,8 +143,8 @@ main {
     width: min(760px, 100%);
     padding: 65px 50px;
     text-align: center;
-    background: rgba(255, 253, 251, 0.88);
-    border: 1px solid rgba(43, 37, 33, 0.05);
+    background: var(--unavailable-card-bk);
+    border: var(--unavailable-card-br);
     border-radius: 24px;
     box-shadow: var(--shadow);
     position: relative;
@@ -133,22 +162,18 @@ main {
     top: -125px;
     right: -80px;
     border-radius: 50%;
-    background: rgba(217, 185, 154, 0.16);
+    background: var(--decorative-circle-1);
 }
 
 .unavailable-card::after {
     content: "";
     position: absolute;
-
     width: 180px;
     height: 180px;
-
     bottom: -100px;
     left: -70px;
-
     border-radius: 50%;
-
-    background: rgba(201, 139, 70, 0.08);
+    background: var(--decorative-circle-2);
 }
 
 /* Icon */
@@ -156,28 +181,20 @@ main {
 .icon {
     width: 92px;
     height: 92px;
-
     margin: 0 auto 28px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
     background: var(--warm);
-    border: 7px solid rgba(139, 90, 54, 0.06);
-
+    border: 7px solid var(--icon-bk);
     color: var(--brown-mid);
-
     font-family: "Playfair Display", serif;
     font-size: 38px;
-
     position: relative;
     z-index: 1;
-
     box-shadow:
-    0 10px 30px rgba(43, 37, 33, 0.07);
+    0 10px 30px var(--icon-bx-shadow);
 }
 
 /* Text */
@@ -260,14 +277,12 @@ h2 {
         var(--accent),
         var(--brown-mid)
     );
-    box-shadow:
-    0 8px 22px rgba(139, 90, 54, 0.14);
+    box-shadow: 0 8px 22px rgba(139, 90, 54, 0.14);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow:
-    0 12px 28px rgba(139, 90, 54, 0.20);
+    box-shadow: 0 12px 28px rgba(139, 90, 54, 0.20);
 }
 
 .btn-secondary {
@@ -287,13 +302,7 @@ h2 {
     width: 70px;
     height: 1px;
     margin: 38px auto 22px;
-    background:
-    linear-gradient(
-        90deg,
-        transparent,
-        var(--brown-light),
-        transparent
-    );
+    background: linear-gradient(90deg, transparent, var(--brown-light), transparent);
     position: relative;
     z-index: 1;
 }
