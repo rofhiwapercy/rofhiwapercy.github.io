@@ -106,15 +106,11 @@ button {
 .logo-mark {
   width: 42px;
   height: 42px;
-
   display: grid;
   place-items: center;
-
   border-radius: 50%;
-
   background: var(--text);
   color: var(--bg);
-
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 15px;
@@ -177,7 +173,6 @@ button {
 
 .menu-btn {
   display: none;
-
   width: 42px;
   height: 42px;
   border: 1px solid var(--border);
@@ -195,6 +190,20 @@ button {
   background: var(--bg-soft);
   transform: translateY(-2px);
 }
+
+.bar1, .bar2, .bar3 {
+  width: 17px;
+  height: 3px;
+  background-color: var(--accent-dark);
+  margin: 2px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {transform: translate(0, 5px) rotate(-45deg);}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {transform: translate(0, -5px) rotate(45deg);}
 
 /* Hero */
 .hero {

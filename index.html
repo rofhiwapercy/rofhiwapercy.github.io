@@ -24,7 +24,11 @@
           aria-label="Toggle navigation"
           aria-expanded="false"
           aria-controls="primaryNav">
-          ☰
+          <div class="menu-icon" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
         </button>
         <ul id="primaryNav" class="nav-list">
           <li><a href="#home">Home</a></li>
@@ -179,7 +183,6 @@
     </section>
   </main>
 
-
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-container">
@@ -197,7 +200,11 @@
       </p>
     </div>
   </footer>
-
   <script src="scripts.js"></script>
+  <script>
+  function myFunction(x) {
+    x.classList.toggle("change");
+  }
+</script>
 </body>
 </html>
