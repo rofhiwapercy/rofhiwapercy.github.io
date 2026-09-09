@@ -123,6 +123,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-// Page Load Animation
+  // Page Load Animation
   document.body.classList.add("page-loaded");
+  // Credentials filtering
+  const credentialFilters = document.querySelectorAll('.credential-filter');
+  const credentialCards = document.querySelectorAll('.credential-card');
+
+  if (credentialFilters.length && credentialCards.length) {
+
+  credentialFilters.forEach(filter => {
+    filter.addEventListener('click', () => {
+
+      // Update active filter
+      credentialFilters.forEach(button => {
+        button.classList.remove('active');
+      });
+
+      filter.classList.add('active');
+
+      // Get selected category
+      const selectedCategory = filter.dataset.filter;
+
+      // Show/hide credential cards
+      credentialCards.forEach(card => {
+        const category = card.dataset.category;
+
+        if (
+          selectedCategory === 'all' ||
+          category === selectedCategory
+        ) {
+          card.classList.remove('credential-hidden');
+        } else {
+          card.classList.add('credential-hidden');
+        }
+      });
+
+    });
+  });
+
+}
 });
