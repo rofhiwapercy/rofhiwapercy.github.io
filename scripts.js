@@ -1,12 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   "use strict";
-
   const $ = (selector, parent = document) =>
     parent.querySelector(selector);
   const $$ = (selector, parent = document) =>
     [...parent.querySelectorAll(selector)];
-
-
   // Current Year
 
   const year = $("#year");
@@ -163,3 +160,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
 }
 });
+
+/* Chess page*/
+(function () {"use strict"; const chessPage = document.querySelector(".chess-page"); if (!chessPage) {return;}
+  /*Enrollment buttons */
+  const enrollmentUrl ="https://forms.gle/MYUrJmLeqyqrtrS8A";
+  const enrollTop =document.getElementById("enrollBtn");
+  const enrollBottom =document.getElementById("enrollBtnBottom");
+  function openEnrollmentForm() {
+    window.open(enrollmentUrl,"_blank","noopener,noreferrer");
+  }
+  if (enrollTop) {
+    enrollTop.addEventListener(
+      "click",
+      openEnrollmentForm
+    );
+  }
+  if (enrollBottom) {
+    enrollBottom.addEventListener(
+      "click",
+      openEnrollmentForm
+    );
+  }
+  const learnMore =
+    document.getElementById("learnMoreBtn");
+  const curriculum =
+    document.getElementById("curriculum");
+  if (learnMore && curriculum) {
+    learnMore.addEventListener("click", function (event) {
+      event.preventDefault();
+      curriculum.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+      curriculum.classList.add(
+        "flash-highlight"
+      );
+      window.setTimeout(function () {
+        curriculum.classList.remove(
+          "flash-highlight"
+        );
+      }, 2200);
+    });
+  }
+/* Chess board animation */
+  const chessSquares = chessPage.querySelectorAll(".chess-square");
+  chessSquares.forEach(function (square) {
+    square.addEventListener(
+      "mouseenter",
+      function () {
+        square.style.transform =
+          "scale(1.04)";
+        square.style.zIndex = "3";
+      }
+    );
+    square.addEventListener(
+      "mouseleave",function () {
+        square.style.transform ="";
+        square.style.zIndex ="";
+      }
+    );
+  });
+})();
