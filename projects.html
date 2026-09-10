@@ -3,213 +3,322 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
-  <meta name="description" content="Projects by Rofhiwa Percy — web development, programming, data science and chess."
-  <title>My Projects | Rofhiwa Percy</title>
-
-=======
-  <meta name="description" content="Projects by Rofhiwa Percy across chemical engineering, data science, coding, web development, automation and technical projects.">
-  <title>My Projects | Rofhiwa Percy</title>
->>>>>>> personal_page
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .projects-page { padding: 52px 0 70px; }
-<<<<<<< HEAD
-    .projects-intro { max-width: 720px; margin-bottom: 34px; }
-    .projects-intro h2 { margin: 0 0 10px; font-family: "Playfair Display", serif; color: var(--brown-dark); font-size: 40px; }
-    .projects-intro p { margin: 0; color: var(--muted-strong); line-height: 1.6; }
-    .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
-    .project-card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid rgba(43,37,33,0.04); border-radius: 14px; padding: 24px; box-shadow: var(--box-shadow); transition: var(--transition); }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 14px 34px rgba(43,37,33,0.09); }
-    .project-icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 12px; background: var(--Warm-100); color: var(--brown-dark); font-size: 25px; margin-bottom: 18px; }
-    .project-card h3 { margin: 0 0 8px; font-family: "Playfair Display", serif; color: var(--brown-dark); font-size: 25px; }
-    .project-card p { margin: 0 0 20px; color: var(--muted-strong); line-height: 1.55; flex: 1; }
-    .project-meta { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
-    .project-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-    .project-actions .btn { text-decoration: none; display: inline-block; }
-    @media (max-width: 700px) { .project-grid { grid-template-columns: 1fr; } .projects-intro h2 { font-size: 32px; } }
-=======
-    .projects-intro { max-width: 760px; margin-bottom: 34px; }
-    .projects-intro h2 { margin: 0 0 10px; font-family: "Playfair Display", serif; color: var(--brown-dark); font-size: 40px; }
-    .projects-intro p { margin: 0; color: var(--muted-strong); line-height: 1.6; }
-    .category-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
-    .category-card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid rgba(43,37,33,0.04); border-radius: 14px; padding: 26px; box-shadow: var(--box-shadow); transition: var(--transition); }
-    .category-card:hover { transform: translateY(-5px); box-shadow: 0 14px 34px rgba(43,37,33,0.09); }
-    .category-icon { width: 56px; height: 56px; display: grid; place-items: center; border-radius: 13px; background: var(--Warm-100); color: var(--brown-dark); font-size: 26px; margin-bottom: 18px; }
-    .category-card h3 { margin: 0 0 9px; font-family: "Playfair Display", serif; color: var(--brown-dark); font-size: 26px; }
-    .category-card p { margin: 0 0 18px; color: var(--muted-strong); line-height: 1.55; flex: 1; }
-    .category-card ul { margin: 0; padding-left: 20px; color: var(--muted-strong); line-height: 1.8; }
-    .category-label { display: inline-block; margin-top: 18px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
-    @media (max-width: 700px) { .category-grid { grid-template-columns: 1fr; } .projects-intro h2 { font-size: 32px; } }
->>>>>>> personal_page
-  </style>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1>Rofhiwa Percy</h1>
-        <p class="tag">Projects &amp; experiments</p>
+<body class="projects-page">
+   <header class="site-header">
+        <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">RP</span>
+            <span class="logo-text">Rofhiwa Percy</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <button
+            id="menuBtn"
+            class="menu-btn"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="primaryNav">
+            <div class="menu-icon" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            </button>
+            <ul id="primaryNav" class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="unavailable.html">Projects</a></li>
+            <li><a href="unavailable.html">Chess Classes</a></li>
+            <li><a href="unavailable.html">Credentials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+  <main>
+    <section class="projects-hero">
+      <div class="container projects-hero-inner">
+        <div class="projects-hero-text">
+          <p class="projects-eyebrow">
+            SELECTED WORK
+          </p>
+          <h2>
+            Projects that turn ideas into practical solutions.
+          </h2>
+          <p>
+            A collection of academic, technical and personal projects
+            spanning chemical engineering, data science, programming
+            and chess.
+          </p>
+        </div>
       </div>
-      <nav class="main-nav" aria-label="Main navigation">
-        <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">☰</button>
-        <ul id="primaryNav" class="nav-list" role="menubar">
-          <li role="none"><a role="menuitem" href="index.html">Home</a></li>
-          <li role="none"><a role="menuitem" href="index.html#about">About</a></li>
-          <li role="none"><a role="menuitem" href="projects.html" aria-current="page">My Projects</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="projects-page container">
-    <section class="projects-intro">
-      <h2>My Projects</h2>
-<<<<<<< HEAD
-      <p>A collection of projects and learning repositories covering programming, data science, web development and chess.</p>
     </section>
-
-    <section class="project-grid" aria-label="Project list">
-      <article class="project-card">
-        <div class="project-icon" aria-hidden="true">♟</div>
-        <h3>Beginner Chess Lessons</h3>
-        <p>A practical chess-learning website focused on openings, tactics, endgames, game analysis and structured improvement.</p>
-        <div class="project-meta">HTML · CSS · JavaScript · GitHub Pages</div>
-        <div class="project-actions"><a class="btn primary" href="index.html">View Project</a></div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-icon" aria-hidden="true">&lt;/&gt;</div>
-        <h3>CodeHub</h3>
-        <p>A programming repository for experimenting with code, building projects and developing practical software skills.</p>
-        <div class="project-meta">Programming · Development</div>
-        <div class="project-actions"><a class="btn primary" href="https://github.com/rofhiwapercy/CodeHub" target="_blank" rel="noopener noreferrer">GitHub Repository</a></div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-icon" aria-hidden="true">Py</div>
-        <h3>Python</h3>
-        <p>A repository for Python practice, exercises and projects while building programming fundamentals.</p>
-        <div class="project-meta">Python · Programming</div>
-        <div class="project-actions"><a class="btn primary" href="https://github.com/rofhiwapercy/Python" target="_blank" rel="noopener noreferrer">GitHub Repository</a></div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-icon" aria-hidden="true">R</div>
-        <h3>Learning R Coding</h3>
-        <p>A learning repository focused on developing skills in the R programming language and data-oriented coding.</p>
-        <div class="project-meta">R · Data &amp; Statistics</div>
-        <div class="project-actions"><a class="btn primary" href="https://github.com/rofhiwapercy/learning_R_coding" target="_blank" rel="noopener noreferrer">GitHub Repository</a></div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-icon" aria-hidden="true">◈</div>
-        <h3>DataScience</h3>
-        <p>A space for data-science projects, experiments and future work with data analysis and modelling.</p>
-        <div class="project-meta">Data Science · Analysis</div>
-        <div class="project-actions"><a class="btn primary" href="https://github.com/rofhiwapercy/DataScience" target="_blank" rel="noopener noreferrer">GitHub Repository</a></div>
-=======
-      <p>A growing collection of work that brings together my interests in chemical engineering, data, software and technical problem-solving.</p>
+    <!--PROJECT FILTER -->
+    <section class="projects-section container">
+      <div class="projects-heading">
+        <div>
+          <p class="projects-eyebrow">EXPLORE</p>
+          <h2>My Projects</h2>
+          <p class="projects-intro">
+            Browse projects by category.
+          </p>
+        </div>
+        <div class="project-filters"role="group" aria-label="Project categories">
+          <button type="button" class="project-filter active" data-filter="all">
+            All
+          </button>
+          <button type="button" class="project-filter" data-filter="chemical">
+            Chemical Engineering
+          </button>
+          <button type="button" class="project-filter" data-filter="data">
+            Data Science
+          </button>
+          <button type="button" class="project-filter" data-filter="coding">
+            Coding
+          </button>
+          <button type="button" class="project-filter" data-filter="chess">
+            Chess
+          </button>
+        </div>
+      </div>
+      <!-- PROJECT GRID  -->
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-item" data-category="chemical">
+          <div class="project-card">
+            <div class="project-card-image chemical-image">
+              <span class="project-category">
+                Chemical Engineering
+              </span>
+            </div>
+            <div class="project-card-content">
+              <h3>
+                Process Design Project
+              </h3>
+              <p>
+                A chemical engineering project focused on process
+                analysis, calculations, equipment selection and
+                engineering decision-making.
+              </p>
+              <div class="project-tags">
+                <span>Process Design</span>
+                <span>Engineering</span>
+                <span>Calculations</span>
+              </div>
+              <a href="#" class="project-link" aria-label="View Process Design Project">View Project
+                <span aria-hidden="true">&#8594</span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article class="project-item" data-category="chemical">
+          <div class="project-card">
+            <div class="project-card-image chemical-image">
+              <span class="project-category">
+                Chemical Engineering
+              </span>
+            </div>
+            <div class="project-card-content">
+              <h3>
+                Engineering Analysis
+              </h3>
+              <p>
+                An engineering analysis project involving mathematical
+                modelling, interpretation of results and technical
+                problem-solving.
+              </p>
+              <div class="project-tags">
+                <span>Modelling</span>
+                <span>Analysis</span>
+                <span>Problem Solving</span>
+              </div>
+              <a href="#" class="project-link" aria-label="View Engineering Analysis Project" >
+                View Project
+                <span aria-hidden="true">&#8594</span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <!-- Project 3 -->
+        <article class="project-item" data-category="data">
+          <div class="project-card">
+            <div class="project-card-image data-image">
+              <span class="project-category">
+                Data Science
+              </span>
+            </div>
+            <div class="project-card-content">
+              <h3>
+                Data Analysis Project
+              </h3>
+              <p>
+                A data-focused project exploring datasets, identifying
+                patterns and transforming raw information into useful
+                insights.
+              </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Data Analysis</span>
+                <span>Visualisation</span>
+              </div>
+              <a href="#" class="project-link" aria-label="View Data Analysis Project">
+                View Project
+                <span aria-hidden="true">&#8594</span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <!-- Project 4 -->
+        <article class="project-item" data-category="coding" >
+          <div class="project-card">
+            <div class="project-card-image coding-image">
+              <span class="project-category">
+                Coding
+              </span>
+            </div>
+            <div class="project-card-content">
+              <h3>
+                Personal Website
+              </h3>
+              <p>
+                The development of this personal website, including
+                responsive layouts, interactive components and
+                reusable front-end code.
+              </p>
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a href="#" class="project-link" aria-label="View Personal Website Project" >
+                View Project
+                <span aria-hidden="true">&#8594</span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <!-- Project 5 -->
+        <article class="project-item" data-category="coding">
+          <div class="project-card">
+            <div class="project-card-image coding-image">
+              <span class="project-category">
+                Coding
+              </span>
+            </div>
+            <div class="project-card-content">
+              <h3>
+                Programming Project
+              </h3>
+              <p>
+                A programming project focused on developing practical
+                software solutions and improving programming and
+                problem-solving skills.
+              </p>
+              <div class="project-tags">
+                <span>Programming</span>
+                <span>Algorithms</span>
+                <span>Software</span>
+              </div>
+              <a href="#" lass="project-link" aria-label="View Programming Project">
+                View Project
+                <span aria-hidden="true">&#8594</span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <!-- Project 6 -->
+        <article class="project-item" data-category="chess">
+          <div class="project-card">
+            <div class="project-card-image chess-image">
+              <span class="project-category">
+                Chess
+              </span>
+            </div>
+            <div class="project-card-content">
+              <h3>
+                Chess Analysis & Training
+              </h3>
+              <p>
+                A collection of chess-related work involving game
+                analysis, training systems, strategic thinking and
+                interactive chess development.
+              </p>
+              <div class="project-tags">
+                <span>Chess</span>
+                <span>Analysis</span>
+                <span>Strategy</span>
+              </div>
+              <a href="chess.html" class="project-link">
+                View Project
+                <span aria-hidden="true">&#8594</span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <!-- Empty / Future Project -->
+        <article class="project-item project-coming-soon" data-category="all">
+          <div class="project-card">
+            <div class="project-card-content">
+              <p class="projects-eyebrow">
+                COMING SOON
+              </p>
+              <h3>
+                More projects are on the way.
+              </h3>
+              <p>
+                This collection will continue to grow as new academic,
+                technical and personal projects are completed.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
-
-    <section class="category-grid" aria-label="Project categories">
-      <article class="category-card">
-        <div class="category-icon" aria-hidden="true">⚗</div>
-        <h3>Chemical Engineering</h3>
-        <p>Projects applying engineering principles to process design, modelling, simulation and practical chemical engineering problems.</p>
-        <ul>
-          <li>Process design &amp; simulation</li>
-          <li>Mass &amp; energy balances</li>
-          <li>Process control</li>
-          <li>Reaction engineering</li>
-          <li>Engineering calculations</li>
-        </ul>
-        <span class="category-label">Engineering · Modelling · Simulation</span>
-      </article>
-
-      <article class="category-card">
-        <div class="category-icon" aria-hidden="true">◈</div>
-        <h3>Data Science</h3>
-        <p>Projects using data to investigate problems, find patterns, communicate results and build useful predictive models.</p>
-        <ul>
-          <li>Data analysis &amp; visualisation</li>
-          <li>Statistics</li>
-          <li>Machine learning</li>
-          <li>Data cleaning &amp; exploration</li>
-          <li>Scientific data projects</li>
-        </ul>
-        <span class="category-label">Python · R · Statistics · ML</span>
-      </article>
-
-      <article class="category-card">
-        <div class="category-icon" aria-hidden="true">&lt;/&gt;</div>
-        <h3>Coding &amp; Software</h3>
-        <p>Programming projects, experiments and tools built while developing software engineering and computational problem-solving skills.</p>
-        <ul>
-          <li>Python projects</li>
-          <li>Web development</li>
-          <li>JavaScript</li>
-          <li>Algorithms &amp; automation</li>
-          <li>Git &amp; GitHub</li>
-        </ul>
-        <span class="category-label">Programming · Web · Automation</span>
-      </article>
-
-      <article class="category-card">
-        <div class="category-icon" aria-hidden="true">⚙</div>
-        <h3>Engineering &amp; Automation</h3>
-        <p>Projects that combine engineering knowledge with programming and automation to make calculations, analysis or workflows easier.</p>
-        <ul>
-          <li>Engineering automation</li>
-          <li>Computational tools</li>
-          <li>Technical calculators</li>
-          <li>Process data workflows</li>
-          <li>Engineering dashboards</li>
-        </ul>
-        <span class="category-label">Engineering · Code · Automation</span>
-      </article>
-
-      <article class="category-card">
-        <div class="category-icon" aria-hidden="true">♟</div>
-        <h3>Chess &amp; Strategy</h3>
-        <p>A space for chess-related projects, analysis and tools that connect your interest in chess with technology and structured learning.</p>
-        <ul>
-          <li>Chess websites</li>
-          <li>Game analysis</li>
-          <li>Chess data</li>
-          <li>Training tools</li>
-          <li>Chess programming experiments</li>
-        </ul>
-        <span class="category-label">Chess · Analysis · Technology</span>
-      </article>
-
-      <article class="category-card">
-        <div class="category-icon" aria-hidden="true">✦</div>
-        <h3>Other Technical Projects</h3>
-        <p>A flexible category for interesting projects that do not fit neatly into one field but demonstrate creativity, initiative or technical growth.</p>
-        <ul>
-          <li>Personal experiments</li>
-          <li>Research-inspired projects</li>
-          <li>Open-source contributions</li>
-          <li>New technologies</li>
-          <li>Cross-disciplinary projects</li>
-        </ul>
-        <span class="category-label">Experiments · Research · Innovation</span>
->>>>>>> personal_page
-      </article>
+    <section class="projects-cta container">
+      <div class="projects-cta-inner">
+        <div>
+          <p class="projects-eyebrow">
+            KEEP EXPLORING
+          </p>
+          <h2>
+            Interested in what I build?
+          </h2>
+          <p>
+            Explore the rest of the website to learn more about my
+            technical interests, chess and academic development.
+          </p>
+        </div>
+        <div class="projects-cta-buttons">
+          <a href="chess.html" class="project-btn project-btn-primary">
+            Explore Chess
+          </a>
+          <a href="index.html" class="project-btn project-btn-outline">
+            Back Home
+          </a>
+        </div>
+      </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Built with PNETSTUDIOS and hosted on GitHub Pages</p>
-    </div>
-  </footer>
-<<<<<<< HEAD
-
-=======
->>>>>>> personal_page
-  <script src="scripts.js"></script>
+<!-- Footer -->
+      <footer class="site-footer">
+        <div class="container footer-container">
+          <div class="footer-brand">
+            <strong>Rofhiwa Percy</strong>
+            <span>Engineering · Technology · Data Science · Chess</span>
+          </div>
+          <div class="footer-links">
+            <a href="https://www.linkedin.com/in/rofhiwapercy27/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/rofhiwapercy" target="_blank">GitHub</a>
+            <a href="https://chesshub.org.za/members/amrofhiwa/" target="_blank">ChessHub</a>
+          </div>
+          <p class="copyright"> &copy; <span id="year"></span> Rofhiwa Percy. Built with PNETSTUDIOS.</p>
+        </div>
+      </footer>
+  <script src="projects.js"></script>
+  <script> function myFunction(x) {x.classList.toggle("change");}</script>
 </body>
 </html>
