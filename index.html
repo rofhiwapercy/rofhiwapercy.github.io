@@ -6,6 +6,7 @@
   <title>Rofhiwa Percy</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
@@ -24,18 +25,21 @@
           aria-label="Toggle navigation"
           aria-expanded="false"
           aria-controls="primaryNav">
-          ☰
+          <div class="menu-icon" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
         </button>
-
         <ul id="primaryNav" class="nav-list">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="unavailable.html">Projects</a></li>
-          <li><a href="unavailable.html">Chess Classes</a></li>
+          <li><a href="chess.html">Chess Classes</a></li>
+          <li><a href="unavailable.html">Credentials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-
     </div>
   </header>
 
@@ -44,11 +48,8 @@
     <!-- Hero -->
     <section id="home" class="hero">
       <div class="container hero-container">
-
         <div class="hero-content">
-
           <p class="eyebrow">CHEMICAL ENGINEERING · TECHNOLOGY · DATA SCIENCE</p>
-
           <h1>
             Building at the intersection of
             <span>engineering</span> and technology.
@@ -64,82 +65,64 @@
             <a href="unavailable.html" class="btn btn-primary">
               View My Projects
             </a>
-
             <a href="#about" class="btn btn-secondary">
               About Me
             </a>
           </div>
-
         </div>
-
         <div class="hero-visual" aria-hidden="true">
           <div class="visual-grid"></div>
-
           <div class="visual-card visual-card-main">
             <span class="visual-label">CURRENT FOCUS</span>
             <strong>Engineering + Code</strong>
             <p>Learning, building, experimenting.</p>
           </div>
-
           <div class="visual-card visual-card-small">
             <span>&lt;/&gt;</span>
           </div>
-
           <div class="visual-orbit"></div>
         </div>
-
       </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section about-section">
       <div class="container">
-
         <div class="section-heading">
           <h2>About Me</h2>
         </div>
-
         <div class="about-grid">
-
           <div class="about-intro">
             <p class="large-text">
               I'm a Chemical Engineering student with a growing interest in
               Data Science and computational problem solving.
             </p>
           </div>
-
           <div class="about-text">
             <p>
               My interests sit across several disciplines. I enjoy combining
               engineering principles with programming, data, and practical
               problem solving.
             </p>
-
             <p>
               This website is a collection of the things I'm learning,
               experimenting with, and building along the way.
             </p>
-
             <a href="#contact" class="text-link">
               Let's connect →
             </a>
           </div>
-
         </div>
-
       </div>
     </section>
 
     <!-- Areas of Interest -->
     <section class="section interests-section">
       <div class="container">
-
         <div class="section-heading">
           <h2>What I'm Into</h2>
         </div>
-
         <div class="interest-grid">
-
           <article class="interest-card">
             <div class="interest-icon">CHE</div>
             <h3>Chemical Engineering</h3>
@@ -148,7 +131,6 @@
               problem-solving.
             </p>
           </article>
-
           <article class="interest-card">
             <div class="interest-icon">&lt;/&gt;</div>
             <h3>Software & Web Development</h3>
@@ -157,7 +139,6 @@
               programming skills.
             </p>
           </article>
-
           <article class="interest-card">
             <div class="interest-icon">DS</div>
             <h3>Data Science</h3>
@@ -169,7 +150,6 @@
               Visit Projects →
             </a>
           </article>
-
           <article class="interest-card">
             <div class="interest-icon">&#9817</div>
             <h3>Chess</h3>
@@ -177,44 +157,33 @@
               Strategy, analysis and coaching. Visit the
               dedicated chess section of the site.
             </p>
-
             <a href="unavailable.html" class="card-link">
               Visit Chess →
             </a>
           </article>
-
         </div>
-
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section contact-section">
       <div class="container">
-
         <div class="contact-content">
-
           <h2>
             Let's build
             <span>something.</span>
           </h2>
-
           <p>
             Interested in collaborating, discussing a project, or simply
             connecting?
           </p>
-
           <a href="mailto:pnetstudios@gmail.com" class="btn btn-primary">
             Get In Touch
           </a>
-
         </div>
-
       </div>
     </section>
-
   </main>
-
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -224,14 +193,20 @@
         <span>Engineering · Technology · Data Science · Chess</span>
       </div>
       <div class="footer-links">
-        <a href="#" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/rofhiwapercy27/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/rofhiwapercy" target="_blank">GitHub</a>
+        <a href="https://chesshub.org.za/members/amrofhiwa/" target="_blank">ChessHub</a>
       </div>
       <p class="copyright">
         &copy; <span id="year"></span> Rofhiwa Percy. Built with PNETSTUDIOS.
       </p>
     </div>
   </footer>
-
   <script src="scripts.js"></script>
+  <script>
+  function myFunction(x) {
+    x.classList.toggle("change");
+  }
+  </script>
 </body>
 </html>

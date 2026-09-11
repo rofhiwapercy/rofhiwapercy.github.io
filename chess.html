@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chess Coaching</title>
+  <meta name="description" content="Beginner chess coaching with Rofhiwa Percy. Learn chess fundamentals, tactics, strategy and endgames through structured lessons and practical training.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body class="chess-page">
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">RP</span>
+        <span class="logo-text">Rofhiwa Percy</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button
+          id="menuBtn"
+          class="menu-btn"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="primaryNav">
+          <div class="menu-icon" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </button>
+        <ul id="primaryNav" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html">Projects</a></li>
+          <li><a href="chess.html">Chess Classes</a></li>
+          <li><a href="index.html">Credentials</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="chess-hero">
+      <div class="container chess-hero-grid">
+        <div class="chess-hero-content">
+          <span class="chess-eyebrow">BEGINNER CHESS PROGRAM</span>
+          <h2>Stop guessing<span>Start understanding chess.</span></h2>
+          <p class="chess-hero-text">Learn the fundamentals of chess through structured lessons, practical training, game analysis and personalised guidance.</p>
+          <div class="chess-hero-actions">
+            <button id="enrollBtn" class="btn primary" type="button"> Enroll Now </button>
+            <a href="#curriculum" id="learnMoreBtn" class="btn outline">Explore the Program</a>
+          </div>
+          <div class="chess-hero-note">
+            <span class="chess-note-icon">&#9816</span>
+            <p>
+              Designed for beginners who want to develop a strong
+              foundation and improve through deliberate practice.
+            </p>
+          </div>
+        </div>
+        <!-- Chess visual -->
+        <div class="chess-visual">
+          <div class="chess-visual-glow"></div>
+          <div class="chess-board" aria-label="Decorative chess board">
+            <div class="chess-square light">&#9820</div>
+            <div class="chess-square dark">&#9822</div>
+            <div class="chess-square light">&#9821</div>
+            <div class="chess-square dark">&#9819</div>
+            <div class="chess-square light">&#9818</div>
+            <div class="chess-square dark">&#9821</div>
+            <div class="chess-square light">&#9822</div>
+            <div class="chess-square dark">&#9820</div>
+
+            <div class="chess-square dark">&#9823</div>
+            <div class="chess-square light">&#9823</div>
+            <div class="chess-square dark">&#9823</div>
+            <div class="chess-square light">&#9823</div>
+            <div class="chess-square dark">&#9823</div>
+            <div class="chess-square light">&#9823</div>
+            <div class="chess-square dark">&#9823</div>
+            <div class="chess-square light">&#9823</div>
+
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+            <div class="chess-square dark"></div>
+            <div class="chess-square light"></div>
+
+            <div class="chess-square light">&#9817</div>
+            <div class="chess-square dark">&#9817</div>
+            <div class="chess-square light">&#9817</div>
+            <div class="chess-square dark">&#9817</div>
+            <div class="chess-square light">&#9817</div>
+            <div class="chess-square dark">&#9817</div>
+            <div class="chess-square light">&#9817</div>
+            <div class="chess-square dark">&#9817</div>
+
+            <div class="chess-square dark">&#9814</div>
+            <div class="chess-square light">&#9816</div>
+            <div class="chess-square dark">&#9815</div>
+            <div class="chess-square light">&#9813</div>
+            <div class="chess-square dark">&#9812</div>
+            <div class="chess-square light">&#9815</div>
+            <div class="chess-square dark">&#9816</div>
+            <div class="chess-square light">&#9814</div>
+          </div>
+          <div class="chess-rating-card">
+            <span>PROGRAM GOAL</span>
+            <strong>1500+</strong>
+            <small>Build the foundation to improve your rating</small>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="program" class="chess-section">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="chess-eyebrow">
+            THE PROGRAM
+          </span>
+          <h2>
+            A structured approach to learning chess
+          </h2>
+          <p>
+            Instead of memorising random moves, learn how to think
+            about the position in front of you.
+          </p>
+        </div>
+        <div class="chess-feature-grid">
+          <article class="chess-feature-card">
+            <div class="feature-number">01</div>
+            <div class="feature-icon">&#9817</div>
+            <h3>Learn the Fundamentals</h3>
+            <p>
+              Understand the rules, principles and ideas that form
+              the foundation of strong chess.
+            </p>
+          </article>
+          <article class="chess-feature-card">
+            <div class="feature-number">02</div>
+            <div class="feature-icon">&#9816</div>
+            <h3>Train Your Tactics</h3>
+            <p>
+              Develop your ability to recognise tactical patterns
+              and calculate practical combinations.
+            </p>
+          </article>
+          <article class="chess-feature-card">
+            <div class="feature-number">03</div>
+            <div class="feature-icon">&#9814</div>
+            <h3>Analyse Your Games</h3>
+            <p>
+              Learn from your own games and understand the decisions
+              that helped or hurt your position.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="curriculum" class="chess-section chess-curriculum-section" tabindex="-1">
+      <div class="container">
+        <div class="section-heading">
+          <span class="chess-eyebrow">CURRICULUM</span>
+          <h2>What you'll learn</h2>
+          <p>
+            The program covers the essential areas of chess while
+            gradually developing your ability to think independently.
+          </p>
+        </div>
+        <div class="curriculum-grid">
+          <article class="curriculum-card">
+            <span class="curriculum-icon">&#9816</span>
+            <div>
+              <span class="curriculum-label">01</span>
+              <h3>Opening Principles</h3>
+              <p>
+                Learn how to develop your pieces, control the centre,
+                protect your king and start games with purpose.
+              </p>
+            </div>
+          </article>
+          <article class="curriculum-card">
+            <span class="curriculum-icon">&#9824</span>
+            <div>
+              <span class="curriculum-label">02</span>
+              <h3>Middle Game & Tactics</h3>
+              <p>
+                Study tactical patterns, calculation and practical
+                decision-making during the most complex part of the game.
+              </p>
+            </div>
+          </article>
+          <article class="curriculum-card">
+            <span class="curriculum-icon">&#9814</span>
+            <div>
+              <span class="curriculum-label">03</span>
+              <h3>Endgames</h3>
+              <p>
+                Build confidence in fundamental endgame positions
+                and learn how to convert advantages into wins.
+              </p>
+            </div>
+          </article>
+          <article class="curriculum-card">
+            <span class="curriculum-icon">&#9815</span>
+            <div>
+              <span class="curriculum-label">04</span>
+              <h3>Game Analysis</h3>
+              <p>
+                Review games to identify mistakes, missed opportunities
+                and recurring patterns in your play.
+              </p>
+            </div>
+          </article>
+          <article class="curriculum-card">
+            <span class="curriculum-icon">&#9818</span>
+            <div>
+              <span class="curriculum-label">05</span>
+              <h3>Strategy</h3>
+              <p>
+                Develop a deeper understanding of positional ideas,
+                planning and long-term decision-making.
+              </p>
+            </div>
+          </article>
+          <article class="curriculum-card curriculum-card-highlight">
+            <span class="curriculum-icon">+</span>
+            <div>
+              <span class="curriculum-label">BONUS</span>
+              <h3>Lichess Resources</h3>
+              <p>
+                Gain access to curated lessons and structured practice
+                resources to continue training outside lessons.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="coach" class="chess-section coach-section">
+      <div class="container coach-grid">
+        <div class="coach-image-wrapper">
+          <div class="coach-image" role="img" aria-label="Chess coach Rofhiwa Percy" style="background-image: url('assets/Coach.png');"></div>
+          <div class="coach-image-label">
+            <span>COACH</span>
+            <strong>Rofhiwa Percy</strong>
+          </div>
+        </div>
+        <div class="coach-content">
+          <span class="chess-eyebrow">
+            YOUR COACH
+          </span>
+          <h2>
+            Learn from someone who understands the game.
+          </h2>
+          <p>
+            The program is led by Rofhiwa Percy, with lessons focused
+            on practical improvement, structured thinking and developing
+            a strong chess foundation.
+          </p>
+          <p>
+            The goal isn't simply to teach you what move to play.
+            It is to help you understand <em>why</em> the move works.
+          </p>
+          <div class="coach-highlight">
+            <span class="coach-highlight-icon">♟</span>
+            <div>
+              <strong>Practical training</strong>
+              <p>
+                Lessons are designed around understanding,
+                application and continuous improvement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="chess-section">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="chess-eyebrow">
+            IS THIS FOR YOU?
+          </span>
+          <h2>
+            Built for players who want to improve
+          </h2>
+        </div>
+        <div class="audience-grid">
+          <div class="audience-item">
+            <span>&#10003</span>
+            <p>You are new to chess and want a structured starting point.</p>
+          </div>
+          <div class="audience-item">
+            <span>&#10003</span>
+            <p>You know the rules but struggle to know what to do next.</p>
+          </div>
+          <div class="audience-item">
+            <span>&#10003</span>
+            <p>You want to understand tactics and strategic ideas.</p>
+          </div>
+          <div class="audience-item">
+            <span>&#10003</span>
+            <p>You want to analyse your games and learn from mistakes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="enroll" class="chess-cta-section">
+      <div class="container">
+        <div class="chess-cta">
+          <div>
+            <span class="chess-eyebrow">READY TO START?</span>
+            <h2>Your next move starts here.</h2>
+            <p>
+              Start building the chess knowledge and habits
+              that will help you become a stronger player.
+            </p>
+          </div>
+          <button id="enrollBtnBottom" class="btn primary"type="button">Enroll Now</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container footer-container">
+          <div class="footer-brand">
+            <strong>Rofhiwa Percy</strong>
+            <span>Engineering · Technology · Data Science · Chess</span>
+          </div>
+          <div class="footer-links">
+            <a href="https://www.linkedin.com/in/rofhiwapercy27/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/rofhiwapercy" target="_blank">GitHub</a>
+            <a href="https://chesshub.org.za/members/amrofhiwa/" target="_blank">ChessHub</a>
+          </div>
+          <p class="copyright"> &copy; <span id="year"></span> Rofhiwa Percy. Built with PNETSTUDIOS.</p>
+        </div>
+      </footer>
+  <script src="scripts.js"></script>
+  <script> function myFunction(x) {x.classList.toggle("change");}</script>
+</body>
+</html>
