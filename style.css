@@ -1786,6 +1786,17 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   background: var(--surface);
 }
 
+.coach-content p a.coach-link {
+  color: var(--accent) !important;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color var(--transition);
+}
+
+.coach-content p a.coach-link:hover {
+  color: var(--accent-light) !important;
+}
+
 .coach-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -1971,6 +1982,10 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
 
 .chess-cta .btn.primary:hover {
   transform: translateY(-2px);
+}
+
+.chess-cta-text {
+  color: var(--text-light) !important;
 }
 
 .chess-page .btn, .chess-page button, .chess-page a {
