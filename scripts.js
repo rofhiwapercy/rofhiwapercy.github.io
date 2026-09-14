@@ -47,20 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Enroll Button
-
-  const enrollBtn = $("#enrollBtn");
-  if (enrollBtn) {
-    enrollBtn.addEventListener("click", () => {
-      window.open(
-        "https://forms.gle/MYUrJmLeqyqrtrS8A",
-        "_blank",
-        "noopener,noreferrer"
-      );
-    });
-  }
-
-
 // Learn More Button
 
   const learnMoreBtn = $("#learnMoreBtn");
@@ -144,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
       // Show/hide credential cards
       credentialCards.forEach(card => {
         const category = card.dataset.category;
-
         if (
           selectedCategory === 'all' ||
           category === selectedCategory
@@ -154,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
           card.classList.add('credential-hidden');
         }
       });
-
     });
   });
 
@@ -164,17 +148,13 @@ document.addEventListener("DOMContentLoaded", () => {
 /* Chess page*/
 (function () {"use strict"; const chessPage = document.querySelector(".chess-page"); if (!chessPage) {return;}
   /*Enrollment buttons */
-  const enrollmentUrl ="https://forms.gle/MYUrJmLeqyqrtrS8A";
+  const enrollmentUrl ="https://calendly.com/pnetstudios/one-on-one-chess-lessons";
   const enrollTop =document.getElementById("enrollBtn");
   const enrollBottom =document.getElementById("enrollBtnBottom");
   function openEnrollmentForm() {
     window.open(enrollmentUrl,"_blank","noopener,noreferrer");
   }
-  if (enrollTop) {
-    enrollTop.addEventListener(
-      "click",
-      openEnrollmentForm
-    );
+  if (enrollTop) {enrollTop.addEventListener("click",openEnrollmentForm);
   }
   if (enrollBottom) {
     enrollBottom.addEventListener(
