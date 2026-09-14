@@ -1484,6 +1484,14 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
 
 .chess-hero-actions .btn {
   text-decoration: none;
+  background: var(--chess-square-light);
+}
+
+.chess-hero-actions .btn:hover {
+  text-decoration: none;
+  transform: translateY(-3px);
+  color: var(--chess-gold);
+  background: var(--chess-light);
 }
 
 .chess-hero-note {
@@ -1976,12 +1984,17 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
 
 .chess-cta .btn.primary {
   flex-shrink: 0;
-  background: var(--cream);
+  background: var(--accent-light);
+  border: 2px solid var(--accent-light);
   color: var(--brown-dark);
 }
 
 .chess-cta .btn.primary:hover {
-  transform: translateY(-2px);
+  text-decoration: none;
+  transform: translateY(-3px);
+  color: var(--chess-gold);
+  background: var(--chess-light);
+  border: 2px ridge var(--accent-light);
 }
 
 .chess-cta-text {
