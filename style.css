@@ -17,6 +17,7 @@
   --shadow-lg: 0 30px 80px rgba(32, 33, 31, 0.12);
   --max-width: 1180px;
   --transition: 0.3s ease;
+  --pj-catgoriy-bg: rgba(253, 245, 230, 0.7);
 }
 
 /* Reset */
@@ -2340,6 +2341,12 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   background-position: center;
   overflow: hidden;
 }
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .chemical-image {
   background:
@@ -2393,14 +2400,16 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
 
 /* Category Badge */
 .project-category {
+  position: absolute;
   display: inline-block;
   padding: 7px 11px;
   border-radius: 999px;
-  background: rgba(255,253,251,0.9);
+  background: var(--pj-catgoriy-bg);
   color: var(--brown-dark);
   font-size: 0.72rem;
   font-weight: 600;
   box-shadow: 0 5px 15px rgba(43,37,33,0.07);
+  z-index: 2;
 }
 
 /* Project Content */
