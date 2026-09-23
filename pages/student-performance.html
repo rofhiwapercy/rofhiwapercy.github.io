@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Student Performance Prediction Algorithm — a machine learning project using a Decision Tree and Random Forest.">
+  <title>Student Performance Algorithm Project</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="student-performance.css">
+</head>
+
+<body>
+  <header class="project-header">
+    <div class="container project-header-inner">
+      <a class="back-link" href="/projects.html" aria-label="Back to projects">&#8592 Projects</a>
+      <span class="project-label">Data Science / Machine Learning</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="project-hero">
+      <div class="container project-hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Machine Learning Project</p>
+          <h1>Student Performance <span>Prediction Algorithm</span></h1>
+          <p class="hero-lead">
+            A classification project that uses previous grades, absences and study time
+            to predict whether a student is likely to pass or fail.
+          </p>
+
+          <div class="tech-list" aria-label="Technologies used">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Scikit-learn</span>
+            <span>Matplotlib</span>
+            <span>Google Colab</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="https://colab.research.google.com/drive/1Y3QNSwAceAaBGs9TL7VbQYYAxuBx8-gj?usp=sharing" target="_blank" rel="noopener noreferrer">
+              View on Google Colab
+            </a>
+            <a class="btn outline" href="https://archive.ics.uci.edu/dataset/320/student+performance" target="_blank" rel="noopener noreferrer">View Source &#8599 </a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Simplified model workflow">
+          <div class="visual-card">
+            <div class="visual-top">
+              <span>MODEL WORKFLOW</span>
+              <span class="dot"></span>
+            </div>
+            <div class="workflow">
+              <div class="workflow-node">
+                <small>INPUT</small>
+                <strong>Student Data</strong>
+                <span>Study time · Previous grade · Absences</span>
+              </div>
+              <div class="workflow-arrow">&#8681</div>
+              <div class="workflow-node accent-node">
+                <small>MODEL</small>
+                <strong>Decision Tree</strong>
+                <span>Classification</span>
+              </div>
+              <div class="workflow-arrow">&#8681</div>
+              <div class="workflow-node">
+                <small>OUTPUT</small>
+                <strong>Pass / Fail</strong>
+                <span>Predicted result</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section">
+      <div class="container two-column">
+        <div>
+          <p class="eyebrow">Overview</p>
+          <h2>Turning student data into a prediction.</h2>
+        </div>
+        <div class="section-copy">
+          <p>
+            This project explores whether selected student characteristics can be used
+            to classify an academic outcome. The notebook uses the UCI Student Performance
+            dataset and builds a binary target: <strong>Pass</strong> when the final grade
+            is at least 10, otherwise <strong>Fail</strong>.
+          </p>
+          <p>
+            The selected inputs are <strong>study time</strong>, <strong>previous grade</strong>
+            and <strong>absences</strong>. A Decision Tree is trained first, followed by a
+            Random Forest to examine model performance and feature importance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dataset -->
+    <section class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Dataset</p>
+          <h2>UCI Student Performance</h2>
+          <p>
+            The notebook identifies the dataset as the UCI Student Performance dataset,
+            originally based on secondary-school students in Portugal.
+          </p>
+        </div>
+
+        <div class="data-cards">
+          <article class="info-card">
+            <span class="card-number">01</span>
+            <h3>Study time</h3>
+            <p>Reported study-time category, encoded from 1 to 4 in the notebook.</p>
+          </article>
+
+          <article class="info-card">
+            <span class="card-number">02</span>
+            <h3>Previous grade</h3>
+            <p>The student's previous grade, used as <code>prev_grade</code>.</p>
+          </article>
+
+          <article class="info-card">
+            <span class="card-number">03</span>
+            <h3>Absences</h3>
+            <p>The number of recorded absences used as a model feature.</p>
+          </article>
+
+          <article class="info-card result-card">
+            <span class="card-number">TARGET</span>
+            <h3>Pass / Fail</h3>
+            <p><code>final_grade ≥ 10</code> becomes Pass; lower values become Fail.</p>
+          </article>
+        </div>
+
+        <a class="text-link" href="https://archive.ics.uci.edu/dataset/320/student+performance" target="_blank" rel="noopener noreferrer">
+          View the UCI dataset ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Methodology</p>
+          <h2>From raw data to classification.</h2>
+        </div>
+
+        <div class="process">
+          <article class="process-step">
+            <span>01</span>
+            <h3>Select</h3>
+            <p>The notebook combines the feature and target data, then keeps the variables needed for the experiment.</p>
+          </article>
+          <article class="process-step">
+            <span>02</span>
+            <h3>Prepare</h3>
+            <p>A binary <code>results</code> target is created from the final grade.</p>
+          </article>
+          <article class="process-step">
+            <span>03</span>
+            <h3>Train</h3>
+            <p>The data is split 80/20 and a Decision Tree with maximum depth 3 is fitted.</p>
+          </article>
+          <article class="process-step">
+            <span>04</span>
+            <h3>Compare</h3>
+            <p>A 100-tree Random Forest is trained to compare performance and inspect feature importance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Results</p>
+          <h2>How the models performed?</h2>
+        </div>
+
+        <div class="results-grid">
+          <article class="model-card">
+            <div class="model-card-top">
+              <span>MODEL 01</span>
+              <span>Decision Tree</span>
+            </div>
+            <h3>Decision Tree</h3>
+            <div class="metrics">
+              <div>
+                <strong>92.5%</strong>
+                <span>Training accuracy</span>
+              </div>
+              <div class="featured-metric">
+                <strong>91.5%</strong>
+                <span>Test accuracy</span>
+              </div>
+            </div>
+            <p>
+              The notebook limits the tree depth to 3 to keep the learned structure
+              readable and reduce the risk of memorising the training data.
+            </p>
+          </article>
+
+          <article class="model-card">
+            <div class="model-card-top">
+              <span>MODEL 02</span>
+              <span>100 trees</span>
+            </div>
+            <h3>Random Forest</h3>
+            <div class="metrics">
+              <div>
+                <strong>95.4%</strong>
+                <span>Training accuracy</span>
+              </div>
+              <div class="featured-metric">
+                <strong>90.8%</strong>
+                <span>Test accuracy</span>
+              </div>
+            </div>
+            <p>
+              The Random Forest uses 100 trees and is then used to examine how much
+              each selected feature contributes to the model.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature importance -->
+    <section class="section">
+      <div class="container two-column feature-section">
+        <div>
+          <p class="eyebrow">Feature Importance</p>
+          <h2>What mattered most to the Random Forest?</h2>
+          <p class="section-intro">
+            The notebook reports the following feature-importance values from the
+            trained Random Forest.
+          </p>
+        </div>
+
+        <div class="importance-chart" aria-label="Feature importance chart">
+          <div class="importance-row">
+            <div class="importance-label">
+              <strong>Previous grade</strong>
+              <span>73.57%</span>
+            </div>
+            <div class="bar-track"><div class="bar" data-width="73.5719"></div></div>
+          </div>
+
+          <div class="importance-row">
+            <div class="importance-label">
+              <strong>Absences</strong>
+              <span>21.28%</span>
+            </div>
+            <div class="bar-track"><div class="bar" data-width="21.2798"></div></div>
+          </div>
+
+          <div class="importance-row">
+            <div class="importance-label">
+              <strong>Study time</strong>
+              <span>5.15%</span>
+            </div>
+            <div class="bar-track"><div class="bar" data-width="5.1483"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decision rules -->
+    <section class="section soft-section">
+      <div class="container">
+        <div class="two-column rules-layout">
+          <div>
+            <p class="eyebrow">Decision Tree</p>
+            <h2>The model can be read as rules.</h2>
+            <p class="section-intro">
+              One useful advantage of a Decision Tree is that its decisions can be
+              inspected as a sequence of conditions.
+            </p>
+          </div>
+
+          <div class="rule-tree">
+            <div class="rule-root">
+              <span>ROOT</span>
+              <strong>Previous grade ≤ 9.50?</strong>
+            </div>
+            <div class="rule-branches">
+              <div class="rule-branch">
+                <span class="branch-label">YES</span>
+                <div class="rule-box">
+                  <strong>Previous grade ≤ 8.50?</strong>
+                  <small>→ Fail in the displayed tree path</small>
+                </div>
+                <div class="rule-box">
+                  <strong>Otherwise: absences ≤ 21.50?</strong>
+                  <small>→ Pass / Fail branch</small>
+                </div>
+              </div>
+
+              <div class="rule-branch">
+                <span class="branch-label">NO</span>
+                <div class="rule-box">
+                  <strong>Previous grade ≤ 10.50?</strong>
+                  <small>→ Pass branch in the displayed tree</small>
+                </div>
+                <div class="rule-box">
+                  <strong>Otherwise: absences ≤ 5.50?</strong>
+                  <small>→ Pass branch in the displayed tree</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo -->
+    <section class="section demo-section" id="prediction-demo">
+      <div class="container demo-card">
+        <div class="demo-copy">
+          <p class="eyebrow">Prediction Demo</p>
+          <h2>Try the Decision Tree.</h2>
+          <p>
+            Enter the three inputs used by the notebook. This small front-end demo
+            mirrors the Decision Tree's displayed rules; it is a portfolio demonstration,
+            not a live Python model endpoint.
+          </p>
+        </div>
+
+        <form id="predictionForm" class="prediction-form">
+          <label>
+            Study time
+            <select id="studytime" required>
+              <option value="1">1 </option>
+              <option value="2">2 </option>
+              <option value="3">3 </option>
+              <option value="4">4 </option>
+            </select>
+          </label>
+
+          <label>
+            Previous grade
+            <input id="prevGrade" type="number" min="0" max="20" step="1" value="10" required>
+          </label>
+
+          <label>
+            Absences
+            <input id="absences" type="number" min="0" step="1" value="3" required>
+          </label>
+
+          <button class="btn primary" type="submit">Predict result</button>
+
+          <div id="predictionResult" class="prediction-result" aria-live="polite">
+            Enter the values and run the demo.
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Notebook -->
+    <section class="section">
+      <div class="container notebook-card">
+        <div>
+          <p class="eyebrow">Notebook</p>
+          <h2>Explore the full implementation.</h2>
+          <p>
+            The complete project was developed in Python using Google Colab. The
+            notebook contains the dataset import, preparation, model training,
+            evaluation, decision-tree rules, prediction example and Random Forest
+            feature-importance analysis.
+          </p>
+        </div>
+        <div class="notebook-actions">
+          <a class="btn primary" href="https://colab.research.google.com/drive/1Y3QNSwAceAaBGs9TL7VbQYYAxuBx8-gj?usp=sharing" target="_blank" rel="noopener noreferrer">
+            Open Google Colab 
+          </a>
+          <a class="btn outline" href="Simple_Decision_Tree.ipynb" download >Download .ipynb</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="project-footer">
+    <div class="container">
+      <a href="projects.html">Back to all projects</a>
+      <p>Student Performance Prediction Algorithm</p>
+    </div>
+  </footer>
+
+  <script src="student-performance.js"></script>
+</body>
+</html>
