@@ -2351,6 +2351,10 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   display: block;
 }
 
+.project-img {
+  border-radius: 1% 0% 5% 5%;
+}
+
 .chemical-image {
   background:
     radial-gradient(
