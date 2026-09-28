@@ -714,6 +714,12 @@ button {
   color: var(--accent-light);
 }
 
+.footer-notice {
+  font-size: 10px;
+  position: absolute;
+  right: 400px;
+}
+
 .copyright {
   grid-column: 1 / -1;
   margin: 0;
