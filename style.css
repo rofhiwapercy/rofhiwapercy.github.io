@@ -2738,3 +2738,206 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
     height: 170px;
   }
 }
+
+/* Temporary credentials page*/
+.professional-development {
+  position: relative;
+  max-width: 850px;
+  margin: 70px auto;
+  padding: 55px 45px;
+  text-align: center;
+  background:linear-gradient(145deg,rgba(255, 253, 251, 0.96),rgba(243, 232, 221, 0.72));
+  border: 1px solid rgba(139, 90, 54, 0.10);
+  border-radius: 22px;
+  box-shadow:
+    0 18px 50px rgba(43, 37, 33, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}
+
+/* Decorative background glow */
+.professional-development::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  top: -110px;
+  right: -90px;
+  background: rgba(201, 139, 70, 0.10);
+  border-radius: 50%;
+  filter: blur(5px);
+}
+
+.professional-development::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  bottom: -90px;
+  left: -70px;
+  background: rgba(139, 90, 54, 0.07);
+  border-radius: 50%;
+}
+
+/* Content stays above decorative elements */
+.professional-development > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Small status label */
+.professional-development .section-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  padding: 7px 14px;
+  border-radius: 50px;
+  background: rgba(201, 139, 70, 0.10);
+  color: var(--brown-mid);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Animated status dot */
+.professional-development .section-status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 rgba(201, 139, 70, 0.4);
+  animation: professionalPulse 2s infinite;
+}
+
+@keyframes professionalPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(201, 139, 70, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 7px rgba(201, 139, 70, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 139, 70, 0);
+  }
+}
+
+/* Heading */
+.professional-development h2 {
+  margin: 0 0 16px;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 600;
+  line-height: 1.15;
+
+  color: var(--brown-dark);
+}
+
+/* Main text */
+.professional-development p {
+  max-width: 620px;
+  margin: 0 auto 26px;
+  color: var(--muted-strong);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* LinkedIn CTA */
+.professional-development .linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 21px;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    var(--accent),
+    var(--brown-mid)
+  );
+  color: var(--inverse-text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow:
+    0 8px 20px rgba(139, 90, 54, 0.14);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+/* LinkedIn icon */
+.professional-development .linkedin-link::before {
+  content: "in";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Hover */
+.professional-development .linkedin-link:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 13px 28px rgba(139, 90, 54, 0.20);
+  filter: brightness(1.04);
+}
+
+/* Keyboard accessibility */
+.professional-development .linkedin-link:focus-visible {
+  outline: 3px solid rgba(201, 139, 70, 0.25);
+  outline-offset: 4px;
+}
+
+/* Divider */
+.professional-development .section-divider {
+  width: 55px;
+  height: 2px;
+  margin: 25px auto 0;
+  border-radius: 10px;
+  background: var(--brown-light);
+}
+/*Footer*/
+.credentials-footer{
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .professional-development {
+    margin: 45px 18px;
+    padding: 40px 22px;
+    border-radius: 18px;
+  }
+
+  .professional-development h2 {
+    font-size: 29px;
+  }
+
+  .professional-development p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .professional-development .linkedin-link {
+    width: 100%;
+    max-width: 260px;
+  }
+}
