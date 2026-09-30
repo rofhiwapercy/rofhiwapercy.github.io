@@ -576,6 +576,11 @@ h2 {
   line-height: 1.7;
 }
 
+.bold {
+  color: var(--sp-accent);
+  font-size: 1.2rem;
+}
+
 .prediction-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
