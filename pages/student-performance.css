@@ -138,6 +138,12 @@ h1 span {
   font-size: 0.78rem;
 }
 
+.tech-tag:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+  box-shadow: 1px 2px 2px var(--sp-brown-light);
+}
+
 .hero-actions,
 .notebook-actions {
   display: flex;
