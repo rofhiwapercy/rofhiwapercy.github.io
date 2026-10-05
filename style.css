@@ -2985,7 +2985,7 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   height: 200px;
   aspect-ratio: 1;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 8px;
   background: var(--bg-soft);
   -webkit-mask-image: linear-gradient(to left, transparent 0%, black 20%);
   mask-image: linear-gradient(to left, transparent 0%, black 20%);
