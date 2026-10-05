@@ -1504,16 +1504,6 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   background: var(--chess-light);
 }
 
-.chess-hero-note {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  max-width: 520px;
-  margin-top: 32px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(43, 37, 33, 0.08);
-}
-
 .chess-note-icon {
   display: flex;
   width: 35px;
@@ -1527,12 +1517,6 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   font-size: 1.1rem;
 }
 
-.chess-hero-note p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.86rem;
-  line-height: 1.55;
-}
 
 /* Chess Board */
 .chess-visual {
@@ -2056,12 +2040,6 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-content: center;
   }
 
-  .chess-hero-note {
-    margin-right: auto;
-    margin-left: auto;
-    text-align: left;
-  }
-
   .chess-visual {
     min-height: auto;
   }
@@ -2158,10 +2136,6 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   .chess-hero-actions .btn {
     width: 100%;
     text-align: center;
-  }
-
-  .chess-hero-note {
-    text-align: left;
   }
 
   .chess-visual {
