@@ -1636,12 +1636,16 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   line-height: 1.7;
 }
 
-.background-icon{
+.background-icon, .background-rook{
   position: absolute;
   width: 120px;
   font-size: 48rem;
   opacity: 0.07;
   pointer-events: none;
+}
+
+.background-rook {
+  left: 800px;
 }
 
 /* Feature Card */
