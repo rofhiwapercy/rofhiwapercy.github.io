@@ -21,6 +21,16 @@
   --pj-catgoriy-bg: rgba(253, 245, 230, 0.7);
   --accent-green-light: #4CAF50;
   --accent-green-dark: #087F5B;
+  /* Palette used by the chess, projects and credentials pages*/
+  --brown-dark: #3b2a22;
+  --brown-mid: #8b5a36;
+  --brown-light: #d9b99a;
+  --Warm-100: #f3e8dd;
+  --cream: #fff8f0;
+  --inverse-text: #fffaf7;
+  --muted: rgba(43, 37, 33, 0.58);
+  --muted-strong: rgba(43, 37, 33, 0.76);
+  --box-shadow: 0 10px 30px rgba(43, 37, 33, 0.06);
 }
 
 /* Reset */
