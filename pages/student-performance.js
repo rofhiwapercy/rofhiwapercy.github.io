@@ -41,12 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      /*
-       * This mirrors the Decision Tree rules printed in the notebook.
-       * The notebook's displayed tree ultimately predicts Fail for:
-       *   prev_grade <= 9.50 AND absences > 21.50
-       * and Pass for the other displayed leaf paths.
-       */
+      /*This mirrors the Decision Tree rules printed in the notebook.*/
       var prediction = "Pass";
 
       if (prevGrade <= 9.5) {
