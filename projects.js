@@ -3,45 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }
-  const menuButton = document.getElementById("projectsMenuBtn");
-  const navigation = document.getElementById("projectsPrimaryNav");
+  const menuButton = document.getElementById("menuBtn");
+  const navigation = document.getElementById("primaryNav");
+  const menuIcon = document.querySelector(".menu-icon");
   if (menuButton && navigation) {
+    function setMenu(open) {
+      navigation.classList.toggle("nav-open", open);
+      menuButton.setAttribute("aria-expanded", String(open));
+      if (menuIcon) menuIcon.classList.toggle("change", open);
+    }
     menuButton.addEventListener("click", function () {
-      const menuIsOpen =
-        navigation.classList.toggle("nav-open");
-      menuButton.setAttribute(
-        "aria-expanded",
-        String(menuIsOpen)
-      );
-
+      setMenu(!navigation.classList.contains("nav-open"));
     });
     /* Close menu when a navigation link is clicked */
-    const navigationLinks =
-      navigation.querySelectorAll("a");
-
-    navigationLinks.forEach(function (link) {
-
-      link.addEventListener("click", function () {
-
-        navigation.classList.remove("nav-open");
-
-        menuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-      });
+    navigation.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () { setMenu(false); });
     });
     /* Reset mobile navigation on larger screens */
-
     window.addEventListener("resize", function () {
-
-      if (window.innerWidth > 980) {
-        navigation.classList.remove("nav-open");
-        menuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-      }
+      if (window.innerWidth > 980) setMenu(false);
     });
   }
   /* Project Filtering */
