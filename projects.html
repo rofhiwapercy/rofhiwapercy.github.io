@@ -22,11 +22,11 @@
             aria-label="Toggle navigation"
             aria-expanded="false"
             aria-controls="primaryNav">
-            <div class="menu-icon" onclick="myFunction(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
+            <span class="menu-icon" aria-hidden="true">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+          </span>
             </button>
             <ul id="primaryNav" class="nav-list">
             <li><a href="index.html">Home</a></li>
@@ -46,9 +46,9 @@
           <p class="projects-eyebrow">
             MY WORK
           </p>
-          <h2>
+          <h1>
             Projects that turn ideas into practical solutions.
-          </h2>
+          </h1>
           <p>
             A collection of my academic, technical and personal projects
             spanning chemical engineering, data science, programming, chess
@@ -370,6 +370,5 @@
         </div>
       </footer>
   <script src="projects.js"></script>
-  <script> function myFunction(x) {x.classList.toggle("change");}</script>
 </body>
 </html>

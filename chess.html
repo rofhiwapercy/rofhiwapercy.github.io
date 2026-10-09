@@ -24,16 +24,16 @@
           aria-label="Toggle navigation"
           aria-expanded="false"
           aria-controls="primaryNav">
-          <div class="menu-icon" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </div>
+          <span class="menu-icon" aria-hidden="true">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+          </span>
         </button>
         <ul id="primaryNav" class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html">Projects</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="chess.html">Chess Classes</a></li>
           <li><a href="credentials.html">Credentials</a></li>
           <li><a href="index.html#contact">Contact</a></li>
@@ -46,7 +46,7 @@
       <div class="container chess-hero-grid">
         <div class="chess-hero-content">
           <span class="chess-eyebrow">BEGINNER CHESS PROGRAM</span>
-          <h2>Stop guessing<span>Start understanding chess.</span></h2>
+          <h1>Stop guessing<span>Start understanding chess.</span></h1>
           <p class="chess-hero-text">
             Book a free introductory session and discover how structured chess lessons can help you play with greater confidence and think more strategically.
           </p>
@@ -373,6 +373,5 @@
         </div>
       </footer>
   <script src="scripts.js"></script>
-  <script> function myFunction(x) {x.classList.toggle("change");}</script>
 </body>
 </html>
