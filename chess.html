@@ -3,11 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chess Coaching</title>
+  <title>Chess Coaching with Rofhiwa Percy | Beginner Chess Lessons</title>
   <meta name="description" content="Beginner chess coaching with Rofhiwa Percy. Learn chess fundamentals, tactics, strategy and endgames through structured lessons and practical training.">
+  <link rel="canonical" href="https://rofhiwapercy.github.io/chess.html">
+
+  <meta property="og:title" content="Chess Coaching with Rofhiwa Percy">
+  <meta property="og:description" content="Structured beginner chess lessons covering openings, tactics, endgames, strategy and game analysis.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rofhiwapercy.github.io/chess.html">
+  <meta property="og:image" content="https://rofhiwapercy.github.io/assets/coach.png">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
 </head>
 
 <body class="chess-page">
@@ -24,18 +34,18 @@
           aria-label="Toggle navigation"
           aria-expanded="false"
           aria-controls="primaryNav">
-          <div class="menu-icon" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </div>
+          <span class="menu-icon" aria-hidden="true">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+          </span>
         </button>
         <ul id="primaryNav" class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html">Projects</a></li>
-          <li><a href="chess.html">Chess Classes</a></li>
-          <li><a href="index.html">Credentials</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="unavailable.html">PNET Studios</a></li>
+          <li><a href="credentials.html">Credentials</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
@@ -46,7 +56,7 @@
       <div class="container chess-hero-grid">
         <div class="chess-hero-content">
           <span class="chess-eyebrow">BEGINNER CHESS PROGRAM</span>
-          <h2>Stop guessing<span>Start understanding chess.</span></h2>
+          <h1>Stop guessing<span>Start understanding chess.</span></h1>
           <p class="chess-hero-text">
             Book a free introductory session and discover how structured chess lessons can help you play with greater confidence and think more strategically.
           </p>
@@ -268,7 +278,7 @@
     <section id="coach" class="chess-section coach-section">
       <div class="container coach-grid">
         <div class="coach-image-wrapper">
-          <div class="coach-image" role="img" aria-label="Chess coach Rofhiwa Percy" style="background-image: url('assets/Coach.png');"></div>
+          <div class="coach-image" role="img" aria-label="Chess coach Rofhiwa Percy" style="background-image: url('assets/coach.png');"></div>
           <div class="coach-image-label">
             <span>COACH</span>
             <strong>Rofhiwa Percy</strong>
@@ -287,12 +297,12 @@
             The program is led by Rofhiwa Percy, with lessons focused
             on practical improvement, structured thinking and developing
             a strong chess foundation. Rofhiwa Percy is the former Tournament president for the Vaal
-            University Chess Club (2024-2025) and he is now the current Secetary of the 
+            University Chess Club (2024-2025) and he is now the current Secretary of the 
             <a href="https://www.instagram.com/p/DaiSCMuMNE2/?utm_source=ig_web_button_share_sheet" target="_blank" class="coach-link">
               Vaal University Chess Club
             </a>
             . He has been playing chess for over 10 years and has been involved in the chess community for many years dominating 
-            at diffarent chess tournaments.
+            at different chess tournaments.
           </p>
           <p>
             The goal isn't simply to teach you what move to play.
@@ -365,6 +375,7 @@
             <span>Engineering · Technology · Data Science · Chess</span>
           </div>
           <div class="footer-links">
+            <a href="#">PNET Studios</a>
             <a href="https://www.linkedin.com/in/rofhiwapercy/" target="_blank">LinkedIn</a>
             <a href="https://github.com/rofhiwapercy" target="_blank">GitHub</a>
             <a href="https://chesshub.org.za/members/amrofhiwa/" target="_blank">ChessHub</a>
@@ -373,6 +384,5 @@
         </div>
       </footer>
   <script src="scripts.js"></script>
-  <script> function myFunction(x) {x.classList.toggle("change");}</script>
 </body>
 </html>

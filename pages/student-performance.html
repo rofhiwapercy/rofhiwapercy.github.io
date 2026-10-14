@@ -3,17 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Student Performance Prediction Algorithm — a machine learning project using a Decision Tree and Random Forest.">
-  <title>Student Performance Algorithm Project</title>
+  <title>Student Performance Prediction Algorithm | Rofhiwa Percy Netshilongwe</title>
+  <meta name="description" content="A machine learning project by Rofhiwa Percy Netshilongwe that uses a Decision Tree and Random Forest in Python to predict whether a student will pass or fail.">
+  <link rel="canonical" href="https://rofhiwapercy.github.io/pages/student-performance.html">
+
+  <meta property="og:title" content="Student Performance Prediction Algorithm">
+  <meta property="og:description" content="Decision Tree and Random Forest classification project in Python, built with Pandas and Scikit-learn.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://rofhiwapercy.github.io/pages/student-performance.html">
+  <meta property="og:image" content="https://rofhiwapercy.github.io/assets/projects/project_1.png">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="student-performance.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Student Performance Prediction Algorithm",
+    "url": "https://rofhiwapercy.github.io/pages/student-performance.html",
+    "description": "A machine learning project using a Decision Tree and Random Forest to predict whether a student will pass or fail.",
+    "author": { "@id": "https://rofhiwapercy.github.io/#person" },
+    "isPartOf": { "@id": "https://rofhiwapercy.github.io/#website" }
+  }
+  </script>
 </head>
 
 <body>
   <header class="project-header">
     <div class="container project-header-inner">
-      <a class="back-link" href="https://rofhiwapercy.github.io/projects.html" aria-label="Back to projects">&#8592 Projects</a>
+      <a class="back-link" href="../projects.html" aria-label="Back to projects">&#8592 Projects</a>
       <span class="project-label">Data Science / Machine Learning</span>
     </div>
   </header>
@@ -346,7 +368,7 @@
 
           <label>
             Previous grade
-            <input id="prevGrade" type="number" min="0" max="20" step="2" value="10" required>
+            <input id="prevGrade" type="number" min="0" max="20" step="1" value="10" required>
           </label>
 
           <label>
@@ -374,7 +396,7 @@
             notebook contains the dataset import, preparation, model training,
             evaluation, decision-tree rules, prediction example and Random Forest
             feature importance analysis.
-            Project was insipered by: <a href="https://www.dirisa.ac.za" target="_blank" style="text-decoration: none;color: #8b5a36;">
+            Project was inspired by: <a href="https://www.dirisa.ac.za" target="_blank" style="text-decoration: none;color: #8b5a36;">
               DIRISA Student Datathon, Intro to Stats & Algorithms
             </a>
           </p>
@@ -383,7 +405,9 @@
           <a class="btn primary" href="https://colab.research.google.com/drive/1Y3QNSwAceAaBGs9TL7VbQYYAxuBx8-gj?usp=sharing" target="_blank" rel="noopener noreferrer">
             Open Google Colab 
           </a>
-          <!--<a class="btn outline" href="#" download >Download .ipynb</a>-->
+          <a class="btn outline" href="https://gist.github.com/rofhiwapercy/d9011c900cb50c7d689db2345b6ae236" target="_blank" rel="noopener noreferrer">
+            Open GitHub Gist
+          </a>
         </div>
       </div>
     </section>
@@ -391,11 +415,10 @@
 
   <footer class="project-footer">
     <div class="container">
-      <a href="https://rofhiwapercy.github.io/projects.html">Back to all projects</a>
+      <a href="../projects.html">Back to all projects</a>
       <p>Student Performance Prediction Algorithm</p>
     </div>
   </footer>
-
   <script src="student-performance.js"></script>
 </body>
 </html>

@@ -11,39 +11,30 @@ document.addEventListener("DOMContentLoaded", () => {
     year.textContent = new Date().getFullYear();
   }
 
-// Mobile Navigation 
+// Mobile Navigation
 
   const menuBtn = $("#menuBtn");
   const navList = $("#primaryNav");
+  const menuIcon = $(".menu-icon");
   if (menuBtn && navList) {
+    const setMenu = open => {
+      navList.classList.toggle("nav-open", open);
+      menuBtn.setAttribute("aria-expanded", String(open));
+      if (menuIcon) menuIcon.classList.toggle("change", open);
+    };
+
     menuBtn.addEventListener("click", () => {
-      const isOpen = navList.classList.toggle("nav-open");
-      menuBtn.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-      );
+      setMenu(!navList.classList.contains("nav-open"));
     });
 
     // Close menu when a navigation link is clicked
     $$(".nav-list a").forEach(link => {
-      link.addEventListener("click", () => {
-        navList.classList.remove("nav-open");
-        menuBtn.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-      });
+      link.addEventListener("click", () => setMenu(false));
     });
 
     // Reset mobile menu when returning to desktop
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 980) {
-        navList.classList.remove("nav-open");
-        menuBtn.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-      }
+      if (window.innerWidth > 980) setMenu(false);
     });
   }
 
@@ -161,27 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "click",
       openEnrollmentForm
     );
-  }
-  const learnMore =
-    document.getElementById("learnMoreBtn");
-  const curriculum =
-    document.getElementById("curriculum");
-  if (learnMore && curriculum) {
-    learnMore.addEventListener("click", function (event) {
-      event.preventDefault();
-      curriculum.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-      curriculum.classList.add(
-        "flash-highlight"
-      );
-      window.setTimeout(function () {
-        curriculum.classList.remove(
-          "flash-highlight"
-        );
-      }, 2200);
-    });
   }
 /* Chess board animation */
   const chessSquares = chessPage.querySelectorAll(".chess-square");
