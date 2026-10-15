@@ -15,8 +15,6 @@
 --shadow-sm: 0 8px 25px rgba(32, 33, 31, 0.06);
 --shadow-md: 0 18px 45px rgba(32, 33, 31, 0.09);
 --shadow-lg: 0 30px 80px rgba(32, 33, 31, 0.12);
---max-width: 1180px;
---transition: 0.3s ease;
 --pj-catgoriy-bg: [Pale Cream Tint] rgba(253, 245, 230, 0.7);
 --accent-green-light: [Leaf Green] #4CAF50;
 --accent-green-dark: [Deep Emerald] #087F5B;
