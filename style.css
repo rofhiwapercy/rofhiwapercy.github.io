@@ -3180,6 +3180,8 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   .involvement-body h3 {
     font-size: 22px;
   }
+}
+
 /* Highlight flash used by the "Explore the Program" button */
 .flash-highlight {
   animation: flashHighlight 2.2s ease;
