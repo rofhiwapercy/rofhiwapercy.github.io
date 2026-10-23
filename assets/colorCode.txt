@@ -1,13 +1,31 @@
-Dark brown:  #693611ff
-Pastel Orange: #f5c695
-Gray Orange: #af7f2b
-Navy: #0E1A2B
-Dark Navy Blue: #0B132B
-Royal Blue: #3A506B
-Teal Blue:  #5BC0BE
-Off-white: #FAFAFA
-Deep Midnight Blue: #0A192F
-Purple Glow: #7A5AF8
-Soft White: #E6F1FF
-Unkown: #3498db
-27 Blue: #0A127F
+# Main color scheme
+--bg: [Warm Ivory] #f7f4ef;
+--bg-soft: [Soft Linen] #eee9e1;
+--surface: [Pure White] #ffffff;
+--surface-st-bg: [Frosted White] rgba(255, 255, 255, 0.8);
+--surface-dark: [Charcoal] #20211f;
+--text: [Charcoal Ink] #20211f;
+--text-soft: [Warm Gray] #62635f;
+--text-light: [Stone Gray] #8a8b86;
+--accent: [Caramel Bronze] #b47a45;
+--accent-dark: [Burnt Umber] #8f5c32;
+--accent-light: [Soft Sand] #d9b895;
+--border: [Faint Charcoal Line] rgba(32, 33, 31, 0.10);
+--border-light: [Whisper Line] rgba(32, 33, 31, 0.06);
+--shadow-sm: 0 8px 25px rgba(32, 33, 31, 0.06);
+--shadow-md: 0 18px 45px rgba(32, 33, 31, 0.09);
+--shadow-lg: 0 30px 80px rgba(32, 33, 31, 0.12);
+--pj-catgoriy-bg: [Pale Cream Tint] rgba(253, 245, 230, 0.7);
+--accent-green-light: [Leaf Green] #4CAF50;
+--accent-green-dark: [Deep Emerald] #087F5B;
+
+# Palette used by the chess, projects and credentials pages
+--brown-dark: [Espresso] #3b2a22;
+--brown-mid: [Chestnut] #8b5a36;
+--brown-light: [Light Tan] #d9b99a;
+--Warm-100: [Warm Parchment] #f3e8dd;
+--cream: [Vanilla Cream] #fff8f0;
+--inverse-text: [Off-White] #fffaf7;
+--muted: [Soft Cocoa Gray] rgba(43, 37, 33, 0.58);
+--muted-strong: [Deep Cocoa Gray] rgba(43, 37, 33, 0.76);
+--box-shadow: 0 10px 30px rgba(43, 37, 33, 0.06);
