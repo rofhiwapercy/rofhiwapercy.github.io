@@ -1666,8 +1666,7 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
   overflow: hidden;
 }
 
-.background-icon,
-.background-rook {
+.background-icon {
   position: absolute;
   z-index: 0;
   width: auto;
